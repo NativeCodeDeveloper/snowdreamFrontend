@@ -3,66 +3,55 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { AnimatedLayout } from "@/Componentes/AnimatedLayout";
 
-// Metadata optimizada para SEO máximo de COCOFIT - Ropa Deportiva Premium
+// Metadata optimizada para SEO máximo de SnowDreams - Equipamiento Snowboard y Ropa de Nieve
 // Configuración completa para indexación en Google, Bing, Yahoo y otros buscadores
-export const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://cocofit.cl");
 
 export const metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://snowdream.nativecode.cl"),
     title: {
-        default: "COCOFIT | Ropa Deportiva Premium - Moda Fitness y Activewear Chile",
-        template: "%s | COCOFIT",
+        default: "SnowDreams | Equipamiento Premium Snowboard y Ropa de Nieve Chile",
+        template: "%s | SnowDreams",
     },
     description:
-        "COCOFIT - Ropa deportiva premium para hombre y mujer. Encuentra la mejor moda fitness, activewear, ropa de gimnasio y vestimenta deportiva en Chile. Envío rápido a todo el país, calidad superior y diseños modernos.",
+        "SnowDreams - Equipamiento premium para snowboard, casacas técnicas y ropa especializada para nieve y montaña en Chile. La mejor selección de productos para conquistar las pistas con estilo y seguridad.",
     keywords: [
         // Marca principal
-        "COCOFIT",
-        "cocofit chile",
-        "cocofit ropa deportiva",
+        "SnowDreams",
+        "snowdreams chile",
+        "snow dreams",
 
         // Categorías principales
-        "ropa deportiva",
-        "ropa fitness",
-        "activewear",
-        "moda deportiva",
-        "ropa de gimnasio",
-        "vestimenta deportiva",
+        "equipamiento snowboard",
+        "ropa de nieve",
+        "ropa de montaña",
+        "casacas para nieve",
+        "ropa snowboard",
+        "equipamiento esquí",
 
-        // Por género
-        "ropa deportiva mujer",
-        "ropa deportiva hombre",
-        "ropa fitness mujer",
-        "ropa fitness hombre",
-        "leggings deportivos",
-        "calzas deportivas",
-        "tops deportivos",
-        "poleras deportivas",
+        // Productos específicos
+        "casacas técnicas",
+        "pantalones snowboard",
+        "ropa impermeable nieve",
+        "chaquetas Gore-Tex",
+        "equipo completo snowboard",
 
-        // Por actividad
-        "ropa para yoga",
-        "ropa para running",
-        "ropa para crossfit",
-        "ropa para pilates",
-        "ropa para entrenar",
-
-        // Características
-        "ropa deportiva premium",
-        "activewear Chile",
-        "moda fitness Chile",
-        "ropa deportiva Santiago",
-        "ropa gym mujer",
-        "ropa gym hombre",
+        // Por características
+        "ropa impermeable montaña",
+        "casacas técnicas Chile",
+        "equipamiento premium nieve",
+        "ropa térmica montaña",
+        "protección nieve",
 
         // Long-tail keywords
-        "comprar ropa deportiva online",
-        "tienda ropa deportiva Chile",
-        "ropa deportiva de calidad",
-        "vestimenta deportiva premium",
-        "moda fitness online",
+        "comprar ropa snowboard online Chile",
+        "tienda equipamiento nieve Santiago",
+        "casacas impermeables para nieve",
+        "equipamiento snowboard profesional",
+        "ropa técnica montaña Chile",
     ],
-    authors: [{ name: "COCOFIT", url: metadataBase.href }],
-    creator: "COCOFIT",
-    publisher: "COCOFIT",
+    authors: [{ name: "SnowDreams", url: "https://snowdream.nativecode.cl" }],
+    creator: "SnowDreams",
+    publisher: "SnowDreams",
 
     // Configuración de robots optimizada para máxima indexación
     robots: {
@@ -84,34 +73,27 @@ export const metadata = {
 
     // URL canónica
     alternates: {
-        canonical: metadataBase.href,
+        canonical: "/",
     },
 
     // Información de categorización
-    category: "Ropa Deportiva",
-    classification: "E-commerce - Moda Deportiva",
+    category: "Equipamiento Deportivo",
+    classification: "E-commerce - Snowboard y Montaña",
 
     // Open Graph optimizado para redes sociales
     openGraph: {
-        title: "COCOFIT | Ropa Deportiva Premium - Moda Fitness Chile",
+        title: "SnowDreams | Equipamiento Premium Snowboard Chile",
         description:
-            "Descubre la mejor ropa deportiva premium en Chile. COCOFIT ofrece activewear de alta calidad para hombre y mujer. Diseños modernos, comodidad y estilo para tu entrenamiento.",
-        url: metadataBase.href,
-        siteName: "COCOFIT",
+            "Descubre el mejor equipamiento para snowboard y ropa técnica para nieve en Chile. SnowDreams ofrece casacas impermeables, pantalones técnicos y equipo completo de alta calidad.",
+        url: "https://snowdream.nativecode.cl",
+        siteName: "SnowDreams",
         images: [
             {
-                url: `${metadataBase.href.replace(/\/$/, "")}/logoGrande.png`,
+                url: "/snow.webp",
                 width: 1200,
                 height: 630,
-                alt: "COCOFIT - Ropa Deportiva Premium Chile",
-                type: "image/png",
-            },
-            {
-                url: `${metadataBase.href.replace(/\/$/, "")}/logoOriginal.png`,
-                width: 800,
-                height: 600,
-                alt: "COCOFIT Logo",
-                type: "image/png",
+                alt: "SnowDreams - Equipamiento Premium Snowboard Chile",
+                type: "image/webp",
             },
         ],
         locale: "es_CL",
@@ -122,16 +104,16 @@ export const metadata = {
     // Twitter/X Cards optimizado
     twitter: {
         card: "summary_large_image",
-        title: "COCOFIT | Ropa Deportiva Premium Chile",
+        title: "SnowDreams | Equipamiento Snowboard Premium Chile",
         description:
-            "Ropa deportiva de alta calidad para tu entrenamiento. Moda fitness moderna y funcional. ¡Envío a todo Chile!",
-        images: [`${metadataBase.href.replace(/\/$/, "")}/logoGrande.png`],
-        creator: "@cocofit",
-        site: "@cocofit",
+            "Equipamiento profesional para snowboard y montaña. Casacas técnicas impermeables y ropa especializada. ¡Envío a todo Chile!",
+        images: ["/snow.webp"],
+        creator: "@snowdreams",
+        site: "@snowdreams",
     },
 
-    // Información de aplicación (si decides hacer PWA en el futuro)
-    applicationName: "COCOFIT",
+    // Información de aplicación
+    applicationName: "SnowDreams",
 
     // Información de verificación (añade tus IDs cuando los tengas)
     verification: {
@@ -155,21 +137,21 @@ export default function RootLayout({ children }) {
     // JSON-LD Schema para SEO estructurado
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "ClothingStore",
-        "name": "COCOFIT",
-        "description": "Ropa deportiva premium para hombre y mujer. Moda fitness, activewear y vestimenta deportiva de alta calidad en Chile.",
-        "url": "https://cocofit.cl",
-        "logo": "https://cocofit.cl/logoGrande.png",
-        "image": "https://cocofit.cl/logoGrande.png",
-        "priceRange": "$$",
+        "@type": "SportsActivityLocation",
+        "name": "SnowDreams",
+        "description": "Equipamiento premium para snowboard, casacas técnicas y ropa especializada para nieve y montaña en Chile.",
+        "url": "https://snowdream.nativecode.cl",
+        "logo": "https://snowdream.nativecode.cl/snow.webp",
+        "image": "https://snowdream.nativecode.cl/snow.webp",
+        "priceRange": "$$$",
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "CL",
             "addressLocality": "Santiago",
             "addressRegion": "Región Metropolitana"
         },
-        "telephone": "+56912345678",
-        "email": "contacto@cocofit.cl",
+        "telephone": "+56999999999",
+        "email": "contacto@snowdreams.cl",
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -177,13 +159,13 @@ export default function RootLayout({ children }) {
             "closes": "23:59"
         },
         "sameAs": [
-            "https://www.instagram.com/cocofit",
-            "https://www.facebook.com/cocofit",
-            "https://twitter.com/cocofit"
+            "https://www.instagram.com/snowdreams",
+            "https://www.facebook.com/snowdreams",
+            "https://twitter.com/snowdreams"
         ],
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://cocofit.cl/catalogo?search={search_term_string}",
+            "target": "https://snowdream.nativecode.cl/catalogo?search={search_term_string}",
             "query-input": "required name=search_term_string"
         }
     };

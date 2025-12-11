@@ -11,6 +11,7 @@ export default function NavBar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
+    const [scrollProgress, setScrollProgress] = useState(0);
 
     // Montar el componente para evitar hidratación
     useEffect(() => {
@@ -19,10 +20,13 @@ export default function NavBar() {
 
     const cantidadProductos = isMounted ? (carrito?.length ?? 0) : 0;
 
-    // Detectar scroll para cambiar el estilo del navbar
+    // Detectar scroll para cambiar el estilo del navbar y el progreso
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = scrollHeight > 0 ? Math.min((window.scrollY / scrollHeight) * 100, 100) : 0;
+            setScrollProgress(progress);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -130,7 +134,7 @@ export default function NavBar() {
                     <div
                         className="h-full bg-gradient-to-r from-cyan-500 to-cyan-600 shadow-[0_0_10px_rgba(6,182,212,0.5)] transition-all duration-150"
                         style={{
-                            width: `${Math.min((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`
+                            width: `${scrollProgress}%`
                         }}
                     />
                 </div>
