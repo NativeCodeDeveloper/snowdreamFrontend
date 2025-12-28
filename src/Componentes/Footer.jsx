@@ -1,24 +1,25 @@
+"use client";
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-black via-cyan-950/20 to-black border-t border-cyan-900/50">
+    <footer className="relative bg-black border-t border-cyan-900/50 text-white">
       {/* Efecto de brillo superior */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent shadow-[0_0_15px_rgba(6,182,212,0.5)]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-400/50 to-transparent shadow-[0_0_15px_rgba(6,182,212,0.5)]" />
 
-      <div className="mx-auto max-w-7xl px-4 py-12 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 py-12 lg:py-16 text-white">
         {/* Grid Principal del Footer */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
 
           {/* Columna 1: Logo y Descripción */}
           <div className="space-y-6">
             <Link href="/" className="inline-block group">
-              <h3 className="text-3xl font-black uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-300 drop-shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all group-hover:drop-shadow-[0_0_30px_rgba(6,182,212,0.8)]">
-                snowdreams
-              </h3>
+              <h3 className="text-3xl font-black uppercase tracking-tight text-white drop-shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all group-hover:drop-shadow-[0_0_30px_rgba(6,182,212,0.8)]">
+                  snowdreams
+                </h3>
             </Link>
-            <p className="text-sm text-cyan-300/70 leading-relaxed">
+            <p className="text-sm text-white/80 text-jsutify leading-relaxed">
               Equipamiento premium para snowboard y deportes de nieve. Diseño innovador, máximo rendimiento y estilo único para conquistar la montaña.
             </p>
             {/* Redes Sociales */}
@@ -65,37 +66,37 @@ export default function Footer() {
 
           {/* Columna 2: Tienda */}
           <div>
-            <h4 className="mb-5 text-lg font-bold uppercase tracking-wide text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]">
+            <h4 className="mb-5 text-lg font-bold uppercase tracking-wide text-white/80 drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]">
               Tienda
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Tablas de Snowboard
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Casacas y Chaquetas
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Pantalones de Nieve
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Botas y Fijaciones
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Accesorios
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Ofertas y Descuentos
                 </Link>
               </li>
@@ -104,37 +105,37 @@ export default function Footer() {
 
           {/* Columna 3: Ayuda e Información */}
           <div>
-            <h4 className="mb-5 text-lg font-bold uppercase tracking-wide text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]">
+            <h4 className="mb-5 text-lg font-bold uppercase tracking-wide text-white/80 drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]">
               Ayuda
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Guía de Tallas
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Envíos y Devoluciones
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Preguntas Frecuentes
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Garantía y Cuidados
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Términos y Condiciones
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-sm text-cyan-300/70 transition-all hover:text-cyan-400 hover:translate-x-1 inline-block">
+                <Link href="/" className="text-sm text-white/80 transition-all hover:text-white hover:translate-x-1 inline-block">
                   Política de Privacidad
                 </Link>
               </li>
@@ -143,12 +144,12 @@ export default function Footer() {
 
           {/* Columna 4: Contacto y Newsletter */}
           <div>
-            <h4 className="mb-5 text-lg font-bold uppercase tracking-wide text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]">
+            <h4 className="mb-5 text-lg font-bold uppercase tracking-wide text-white/80 drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]">
               Contacto
             </h4>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-3 text-sm text-cyan-300/70">
-                <svg className="h-5 w-5 mt-0.5 flex-shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5 mt-0.5 shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <a href="mailto:info@snowdreams.com" className="hover:text-cyan-400 transition-colors">
@@ -156,7 +157,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-cyan-300/70">
-                <svg className="h-5 w-5 mt-0.5 flex-shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5 mt-0.5 shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <a href="tel:+56912345678" className="hover:text-cyan-400 transition-colors">
@@ -164,7 +165,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-cyan-300/70">
-                <svg className="h-5 w-5 mt-0.5 flex-shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5 mt-0.5 shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -174,16 +175,16 @@ export default function Footer() {
 
             {/* Newsletter */}
             <div>
-              <p className="mb-3 text-sm text-cyan-300/70">Suscríbete a nuestras ofertas</p>
+              <p className="mb-3 text-sm text-white/80">Suscríbete a nuestras ofertas</p>
               <div className="flex gap-2">
                 <input
                   type="email"
                   placeholder="Tu email"
-                  className="flex-1 rounded-lg border border-cyan-500/30 bg-cyan-900/20 px-4 py-2 text-sm text-cyan-100 placeholder-cyan-500/50 backdrop-blur-sm transition-all focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/30"
+                  className="flex-1 rounded-lg border border-white/30 bg-black/40 px-4 py-2 text-sm text-white placeholder-white/50 backdrop-blur-sm transition-all focus:border-white focus:outline-none focus:ring-2 focus:ring-white/30"
                 />
                 <button
                   onClick={() => window.location.href = '/'}
-                  className="rounded-lg border border-cyan-500/50 bg-gradient-to-r from-cyan-500 to-cyan-600 px-4 py-2 text-sm font-bold text-white shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] hover:scale-105"
+                  className="rounded-lg border border-white/50 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow transition-all hover:border-white hover:bg-white/20 hover:shadow-lg hover:scale-105"
                 >
                   Enviar
                 </button>
@@ -197,7 +198,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Métodos de Pago */}
             <div>
-              <p className="mb-4 text-xs uppercase tracking-wide text-cyan-500/70">Métodos de Pago Seguros</p>
+              <p className="mb-4 text-xs uppercase tracking-wide text-white/70">Métodos de Pago Seguros</p>
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex h-10 items-center justify-center rounded-lg border border-cyan-800/50 bg-white/5 px-4 backdrop-blur-sm">
                   <Image
@@ -209,20 +210,20 @@ export default function Footer() {
                   />
                 </div>
                 <div className="flex h-10 items-center rounded-lg border border-cyan-800/50 bg-white/5 px-3 backdrop-blur-sm">
-                  <span className="text-xs font-semibold text-cyan-300">💳 VISA</span>
+                  <span className="text-xs font-semibold text-white/80">💳 VISA</span>
                 </div>
                 <div className="flex h-10 items-center rounded-lg border border-cyan-800/50 bg-white/5 px-3 backdrop-blur-sm">
-                  <span className="text-xs font-semibold text-cyan-300">💳 MASTERCARD</span>
+                  <span className="text-xs font-semibold text-white/80">💳 MASTERCARD</span>
                 </div>
                 <div className="flex h-10 items-center rounded-lg border border-cyan-800/50 bg-white/5 px-3 backdrop-blur-sm">
-                  <span className="text-xs font-semibold text-cyan-300">💰 WEBPAY</span>
+                  <span className="text-xs font-semibold text-white/80">💰 WEBPAY</span>
                 </div>
               </div>
             </div>
 
             {/* Métodos de Envío */}
             <div className="md:text-right">
-              <p className="mb-4 text-xs uppercase tracking-wide text-cyan-500/70">Envíos con</p>
+              <p className="mb-4 text-xs uppercase tracking-wide text-white/80">Envíos con</p>
               <div className="flex flex-wrap items-center justify-start md:justify-end gap-4">
                 <div className="flex h-10 items-center justify-center rounded-lg border border-cyan-800/50 bg-white/5 px-4 backdrop-blur-sm">
                   <Image
@@ -233,7 +234,7 @@ export default function Footer() {
                     className="opacity-90 hover:opacity-100 transition-opacity"
                   />
                 </div>
-                <div className="flex h-10 items-center justify-center rounded-lg border border-cyan-800/50 bg-white/5 px-4 backdrop-blur-sm">
+                <div className="flex h-10 items-center justify-center rounded-lg border border-cyan-800/50 backdrop-blur-smtext-white/80 px-4 backdrop-blur-sm">
                   <Image
                     src="/Chilexpress_2012.webp"
                     alt="Chilexpress"
@@ -243,7 +244,7 @@ export default function Footer() {
                   />
                 </div>
                 <div className="flex h-10 items-center rounded-lg border border-cyan-800/50 bg-white/5 px-3 backdrop-blur-sm">
-                  <span className="text-xs font-semibold text-cyan-300">📦 BLUEXPRESS</span>
+                  <span className="text-xs font-semibold text-white/80">📦 BLUEXPRESS</span>
                 </div>
               </div>
             </div>
@@ -253,24 +254,24 @@ export default function Footer() {
         {/* Barra de Copyright */}
         <div className="mt-10 pt-8 border-t border-cyan-900/50">
           <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
-            <p className="text-xs text-cyan-700/60">
-              © 2025 <span className="font-bold text-cyan-600">SnowDreams</span>. Todos los derechos reservados. | Tienda de equipamiento premium para snowboard y deportes de nieve.
+            <p className="text-xs text-white/60">
+              © 2025 <span className="font-bold text-white/80">SnowDreams</span>. Todos los derechos reservados. | Tienda de equipamiento premium para snowboard y deportes de nieve.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-xs text-cyan-600/60">
-              <Link href="/" className="transition-colors hover:text-cyan-400">Privacidad</Link>
+            <div className="flex flex-wrap justify-center gap-4 text-xs text-white/60">
+              <Link href="/" className="transition-colors hover:text-white">Privacidad</Link>
               <span>•</span>
-              <Link href="/" className="transition-colors hover:text-cyan-400">Términos</Link>
+              <Link href="/" className="transition-colors hover:text-white">Términos</Link>
               <span>•</span>
-              <Link href="/" className="transition-colors hover:text-cyan-400">Cookies</Link>
+              <Link href="/" className="transition-colors hover:text-white">Cookies</Link>
               <span>•</span>
-              <Link href="/" className="transition-colors hover:text-cyan-400">Accesibilidad</Link>
+              <Link href="/" className="transition-colors hover:text-white">Accesibilidad</Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Efecto de brillo inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/30 to-transparent" />
     </footer>
   );
 }

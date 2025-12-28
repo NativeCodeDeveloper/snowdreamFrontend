@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+
 import AppleCarousel from "@/Componentes/AppleCarousel.jsx";
+import Footer from "@/Componentes/Footer.jsx";
 
 
 export const metadata = {
@@ -48,52 +50,48 @@ export const metadata = {
 
 export default function PortadaPage() {
   return (
-    <main className="relative min-h-screen bg-black">
+    <main className="relative min-h-screen bg-white text-base flex flex-col">
       {/* Hero Section con imagen de fondo */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative min-h-[80vh] h-screen w-full overflow-hidden flex items-center justify-center">
         {/* Imagen de fondo */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/snow.webp"
+            src="/snowport2.jpg"
             alt="Snowboard en montaña nevada"
             fill
             priority
             className="object-cover"
             quality={100}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/50 via-black/40 to-black/80" />
+          <div className="absolute inset-0 bg-linear-to-b from-cyan-950/50 via-black/40 to-black/80" />
         </div>
 
         {/* Contenido Hero */}
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
-          <div className="max-w-5xl">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-2 sm:px-4 text-center">
+          <div className="w-full max-w-4xl mx-auto">
             {/* Logo/Título Principal */}
-            <h1 className="mb-6 text-6xl font-black uppercase tracking-tight text-white drop-shadow-[0_0_30px_rgba(6,182,212,0.5)] sm:text-7xl md:text-8xl lg:text-9xl">
+            <h1 className="mb-6 text-3xl sm:text-7xl md:text-8xl lg:text-[8rem] xl:text-[10rem] font-black uppercase tracking-tight text-cyan-600 drop-shadow-[0_0_30px_rgba(6,182,212,0.10)] text-center leading-none">
               snowdreams
             </h1>
 
             {/* Subtítulo */}
-            <p className="mb-4 text-xl font-light tracking-wide text-cyan-300 drop-shadow-[0_0_20px_rgba(6,182,212,0.4)] sm:text-2xl md:text-3xl">
-              VIVE TU PASIÓN EN LA NIEVE
+            <p className="mb-4 text-lg sm:text-2xl md:text-3xl font-light tracking-wide text-cyan-800 text-center mt-12">
+              Vive la adrenalina de los deportes extremos en la nieve
             </p>
 
-            <p className="mb-12 px-4 text-base font-light text-cyan-50 drop-shadow-lg sm:text-lg md:text-xl">
-              Equipamiento premium para snowboard y deportes de nieve.<br className="hidden sm:block" />
-              Diseño innovador. Máximo rendimiento. Estilo único.
-            </p>
 
             {/* CTAs */}
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-3 xs:gap-4 sm:flex-row justify-center items-center">
               <Link
                 href="/"
-                className="group relative overflow-hidden rounded-full border-2 border-cyan-400/50 bg-gradient-to-r from-cyan-500 to-cyan-600 px-10 py-4 text-lg font-bold text-white shadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(6,182,212,0.8)]"
+                className="group relative overflow-hidden rounded-full border-2 border-cyan-400/50 bg-linear-to-r from-cyan-500 to-cyan-600 px-6 xs:px-10 py-3 xs:py-4 text-base xs:text-lg font-bold text-cyan-700 backdrop-blur-smshadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(6,182,212,0.8)]"
               >
                 <span className="relative z-10">Explorar Colección</span>
               </Link>
 
               <Link
                 href="/"
-                className="rounded-full border-2 border-cyan-400/80 bg-cyan-500/10 px-10 py-4 text-lg font-bold text-cyan-50 backdrop-blur-sm shadow-[0_0_20px_rgba(6,182,212,0.2)] transition-all hover:bg-cyan-400/20 hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.5)]"
+                className="rounded-full border-2 border-cyan-400/80 bg-cyan-500/10 px-6 xs:px-10 py-3 xs:py-4 text-base xs:text-lg font-bold text-cyan-700 backdrop-blur-sm shadow-[0_0_20px_rgba(6,182,212,0.2)] transition-all hover:bg-cyan-400/20 hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.5)]"
               >
                 Ver Ofertas
               </Link>
@@ -101,11 +99,11 @@ export default function PortadaPage() {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="flex flex-col items-center gap-2">
+          <div className="absolute bottom-2 sm:bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-20">
+            <div className="flex flex-col items-center gap-2 sm:gap-3">
               <p className="text-xs uppercase tracking-widest text-cyan-300/70">Scroll</p>
-              <div className="h-8 w-5 rounded-full border-2 border-cyan-400/50 shadow-[0_0_15px_rgba(6,182,212,0.3)]">
-                <div className="mt-1 ml-1.5 h-2 w-1 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.6)]" />
+              <div className="h-8 w-5 rounded-full border-2 border-cyan-400/50 shadow-[0_0_15px_rgba(6,182,212,0.3)] flex items-start justify-center">
+                <div className="mt-2 ml-1.5 h-2 w-1 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.6)]" />
               </div>
             </div>
           </div>
@@ -113,48 +111,48 @@ export default function PortadaPage() {
       </section>
 
       {/* Features Section */}
-      <section className="relative z-20 bg-gradient-to-b from-white to-cyan-50/30 py-20 px-4">
+      <section className="relative z-20 bg-white py-10 xs:py-16 md:py-20 px-2 xs:px-4">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-black uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-400 md:text-5xl lg:text-6xl">
+          <div className="mb-10 xs:mb-16 text-center">
+            <h2 className="mb-2 xs:mb-4 text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-cyan-400">
               Tecnología de Élite
             </h2>
-            <p className="text-lg text-gray-700 md:text-xl">
+            <p className="text-sm xs:text-base sm:text-lg text-gray-700 md:text-xl">
               Equipamiento diseñado para conquistar las montañas más extremas
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-12">
+          <div className="grid grid-cols-1 gap-6 xs:gap-8 md:grid-cols-3 lg:gap-12">
             {/* Feature 1 */}
-            <div className="group relative overflow-hidden rounded-3xl border-2 border-cyan-200/50 bg-gradient-to-br from-cyan-50 to-white p-8 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:-translate-y-2">
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-3xl text-white shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-                ❄️
+            <div className="group relative overflow-hidden rounded-3xl border-2 border-cyan-300/60 bg-white p-7 xs:p-10 shadow-xl transition-all hover:border-cyan-500 hover:shadow-[0_0_40px_rgba(6,182,212,0.15)] hover:-translate-y-2 flex flex-col items-center text-center">
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500 text-4xl text-white shadow-lg">
+                
               </div>
-              <h3 className="mb-3 text-2xl font-bold text-cyan-900">Impermeabilidad 20K</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Membrana técnica que te mantiene seco en las condiciones más extremas. Sellado térmico en todas las costuras.
+              <h3 className="mb-3 text-2xl font-extrabold tracking-tight text-cyan-800 uppercase">Impermeabilidad 20K</h3>
+              <p className="text-base text-gray-600 font-medium leading-relaxed max-w-xs mx-auto">
+                Membrana técnica que te mantiene seco en las condiciones más extremas.<br />Sellado térmico en todas las costuras.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="group relative overflow-hidden rounded-3xl border-2 border-cyan-200/50 bg-gradient-to-br from-cyan-50 to-white p-8 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:-translate-y-2">
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-3xl text-white shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-                🌬️
+            <div className="group relative overflow-hidden rounded-3xl border-2 border-cyan-300/60 bg-white p-7 xs:p-10 shadow-xl transition-all hover:border-cyan-500 hover:shadow-[0_0_40px_rgba(6,182,212,0.15)] hover:-translate-y-2 flex flex-col items-center text-center">
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500 text-4xl text-white shadow-lg">
+                
               </div>
-              <h3 className="mb-3 text-2xl font-bold text-cyan-900">Respirabilidad Total</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Sistema de ventilación avanzado. Mantén la temperatura perfecta sin importar la intensidad de tu sesión.
+              <h3 className="mb-3 text-2xl font-extrabold tracking-tight text-cyan-800 uppercase">Respirabilidad Total</h3>
+              <p className="text-base text-gray-600 font-medium leading-relaxed max-w-xs mx-auto">
+                Sistema de ventilación avanzado.<br />Mantén la temperatura perfecta sin importar la intensidad de tu sesión.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="group relative overflow-hidden rounded-3xl border-2 border-cyan-200/50 bg-gradient-to-br from-cyan-50 to-white p-8 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:-translate-y-2">
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-3xl text-white shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-                🎯
+            <div className="group relative overflow-hidden rounded-3xl border-2 border-cyan-300/60 bg-white p-7 xs:p-10 shadow-xl transition-all hover:border-cyan-500 hover:shadow-[0_0_40px_rgba(6,182,212,0.15)] hover:-translate-y-2 flex flex-col items-center text-center">
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500 text-4xl text-white shadow-lg">
+                
               </div>
-              <h3 className="mb-3 text-2xl font-bold text-cyan-900">Diseño Ergonómico</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Cortes anatómicos que se adaptan a tu cuerpo. Máxima libertad de movimiento para tus mejores trucos.
+              <h3 className="mb-3 text-2xl font-extrabold tracking-tight text-cyan-800 uppercase">Diseño Ergonómico</h3>
+              <p className="text-base text-gray-600 font-medium leading-relaxed max-w-xs mx-auto">
+                Cortes anatómicos que se adaptan a tu cuerpo.<br />Máxima libertad de movimiento para tus mejores trucos.
               </p>
             </div>
           </div>
@@ -162,18 +160,18 @@ export default function PortadaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-gradient-to-b from-black via-cyan-950/20 to-black py-20 px-4">
+      <section className="relative bg-white py-10 xs:py-16 md:py-20 px-2 xs:px-4">
         <div className="mx-auto max-w-4xl text-center">
           <div>
-            <h2 className="mb-6 text-4xl font-black uppercase text-white drop-shadow-[0_0_30px_rgba(6,182,212,0.5)] md:text-5xl lg:text-6xl">
+            <h2 className="mb-4 xs:mb-6 text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase text-cyan-700 tracking-tightdrop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
               Lista tu próxima aventura
             </h2>
-            <p className="mb-10 text-lg text-cyan-200 md:text-xl">
+            <p className="mb-6 xs:mb-10 text-sm xs:text-base sm:text-lg text-cyan-500 md:text-xl">
               Envío gratis en pedidos superiores a $50.000 | Devolución gratuita 30 días
             </p>
             <Link
               href="/"
-              className="inline-block rounded-full border-2 border-cyan-400/60 bg-gradient-to-r from-cyan-500 to-cyan-600 px-12 py-5 text-xl font-bold text-white shadow-[0_0_40px_rgba(6,182,212,0.5)] transition-all hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(6,182,212,0.8)]"
+              className="inline-block rounded-full border-2 border-cyan-400/60 bg-linear-to-r from-cyan-500 to-cyan-600 px-8 xs:px-12 py-3 xs:py-5 text-base xs:text-xl font-bold text-cyan-700 shadow-[0_0_40px_rgba(6,182,212,0.5)] transition-all hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(6,182,212,0.8)]"
             >
               Comprar Ahora →
             </Link>
@@ -182,24 +180,24 @@ export default function PortadaPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gradient-to-b from-white to-cyan-50/50 py-16 px-4">
+      <section className="bg-white py-8 xs:py-12 md:py-16 px-2 xs:px-4">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
-            <div className="rounded-2xl border border-cyan-200/50 bg-white/50 p-6 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
-              <p className="mb-2 text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-cyan-600">10K+</p>
-              <p className="text-sm font-medium uppercase tracking-wide text-cyan-700">Clientes Felices</p>
+          <div className="grid grid-cols-2 gap-4 xs:gap-8 text-center md:grid-cols-4">
+            <div className="rounded-2xl border border-cyan-200/50 bg-white/50 p-3 xs:p-4 sm:p-6 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+              <p className="mb-1 xs:mb-2 text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-linear-to-br from-cyan-500 to-cyan-600">10K+</p>
+              <p className="text-xs xs:text-sm font-medium uppercase tracking-wide text-cyan-700">Clientes Felices</p>
             </div>
-            <div className="rounded-2xl border border-cyan-200/50 bg-white/50 p-6 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
-              <p className="mb-2 text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-cyan-600">50+</p>
-              <p className="text-sm font-medium uppercase tracking-wide text-cyan-700">Modelos Disponibles</p>
+            <div className="rounded-2xl border border-cyan-200/50 bg-white/50 p-3 xs:p-4 sm:p-6 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+              <p className="mb-1 xs:mb-2 text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-linear-to-br from-cyan-500 to-cyan-600">50+</p>
+              <p className="text-xs xs:text-sm font-medium uppercase tracking-wide text-cyan-700">Modelos Disponibles</p>
             </div>
-            <div className="rounded-2xl border border-cyan-200/50 bg-white/50 p-6 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
-              <p className="mb-2 text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-cyan-600">100%</p>
-              <p className="text-sm font-medium uppercase tracking-wide text-cyan-700">Satisfacción</p>
+            <div className="rounded-2xl border border-cyan-200/50 bg-white/50 p-3 xs:p-4 sm:p-6 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+              <p className="mb-1 xs:mb-2 text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-linear-to-br from-cyan-500 to-cyan-600">100%</p>
+              <p className="text-xs xs:text-sm font-medium uppercase tracking-wide text-cyan-700">Satisfacción</p>
             </div>
-            <div className="rounded-2xl border border-cyan-200/50 bg-white/50 p-6 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
-              <p className="mb-2 text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-cyan-600">24/7</p>
-              <p className="text-sm font-medium uppercase tracking-wide text-cyan-700">Soporte</p>
+            <div className="rounded-2xl border border-cyan-200/50 bg-white/50 p-3 xs:p-4 sm:p-6 shadow-lg transition-all hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+              <p className="mb-1 xs:mb-2 text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-linear-to-br from-cyan-500 to-cyan-600">24/7</p>
+              <p className="text-xs xs:text-sm font-medium uppercase tracking-wide text-cyan-700">Soporte</p>
             </div>
           </div>
         </div>
@@ -207,11 +205,7 @@ export default function PortadaPage() {
 
 
         <AppleCarousel />
-
-
-
-
-    </main>
+      </main>
   );
 }
 
