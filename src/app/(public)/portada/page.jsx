@@ -50,14 +50,13 @@ export const metadata = {
 
 export default function PortadaPage() {
   return (
-    <main className="relative min-h-screen bg-white text-base flex flex-col">
+    <main className="relative min-h-screen bg-white text-base flex flex-col items-center text-center">
       {/* Hero Section con imagen de fondo */}
       <section className="relative min-h-[80vh] h-screen w-full overflow-hidden flex items-center justify-center">
         {/* Imagen de fondo */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/snowport2.jpg"
-            alt="Snowboard en montaña nevada"
             fill
             priority
             className="object-cover"
@@ -68,30 +67,36 @@ export default function PortadaPage() {
 
         {/* Contenido Hero */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-2 sm:px-4 text-center">
-          <div className="w-full max-w-4xl mx-auto">
+          <div className="w-full flex flex-col items-center justify-center">
             {/* Logo/Título Principal */}
-            <h1 className="mb-6 text-3xl sm:text-7xl md:text-8xl lg:text-[8rem] xl:text-[10rem] font-black uppercase tracking-tight text-cyan-600 drop-shadow-[0_0_30px_rgba(6,182,212,0.10)] text-center leading-none">
-              snowdreams
-            </h1>
+            <div className="w-full flex justify-center">
+              <h1 className="mb-6 w-full max-w-[1200px] text-3xl sm:text-7xl md:text-8xl lg:text-[8rem] xl:text-[10rem] font-black uppercase tracking-tight text-white drop-shadow-[0_0_30px_rgba(6,182,212,0.10)] text-center leading-none">
+                snowdreams
+              </h1>
+            </div>
 
             {/* Subtítulo */}
-            <p className="mb-4 text-lg sm:text-2xl md:text-3xl font-light tracking-wide text-cyan-800 text-center mt-12">
+            <p className="mb-4 text-lg sm:text-2xl md:text-3xl font-light tracking-wide text-white mt-12 text-center w-full">
               Vive la adrenalina de los deportes extremos en la nieve
             </p>
 
+            <p className="mb-10 px-2 sm:px-8 text-base sm:text-lg md:text-xl font-light text-white text-center w-full">
+              Equipamiento premium para snowboard y deportes de nieve.<br className="hidden sm:block" />
+              Tecnología, innovación y rendimiento para atletas que buscan lo mejor.
+            </p>
 
             {/* CTAs */}
-            <div className="flex flex-col gap-3 xs:gap-4 sm:flex-row justify-center items-center">
+            <div className="flex flex-col gap-3 xs:gap-4 sm:flex-row justify-center items-center w-full">
               <Link
                 href="/"
-                className="group relative overflow-hidden rounded-full border-2 border-cyan-400/50 bg-linear-to-r from-cyan-500 to-cyan-600 px-6 xs:px-10 py-3 xs:py-4 text-base xs:text-lg font-bold text-cyan-700 backdrop-blur-smshadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(6,182,212,0.8)]"
+                className="group relative overflow-hidden rounded-full border-2 border-cyan-400/50 bg-linear-to-r from-cyan-500 to-cyan-600 px-6 xs:px-10 py-3 xs:py-4 text-base xs:text-lg font-bold text-white backdrop-blur-smshadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(6,182,212,0.8)] text-center"
               >
                 <span className="relative z-10">Explorar Colección</span>
               </Link>
 
               <Link
                 href="/"
-                className="rounded-full border-2 border-cyan-400/80 bg-cyan-500/10 px-6 xs:px-10 py-3 xs:py-4 text-base xs:text-lg font-bold text-cyan-700 backdrop-blur-sm shadow-[0_0_20px_rgba(6,182,212,0.2)] transition-all hover:bg-cyan-400/20 hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.5)]"
+                className="rounded-full border-2 border-cyan-400/80 bg-cyan-500/10 px-6 xs:px-10 py-3 xs:py-4 text-base xs:text-lg font-bold text-white backdrop-blur-sm shadow-[0_0_20px_rgba(6,182,212,0.2)] transition-all hover:bg-cyan-400/20 hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] text-center"
               >
                 Ver Ofertas
               </Link>
@@ -171,7 +176,7 @@ export default function PortadaPage() {
             </p>
             <Link
               href="/"
-              className="inline-block rounded-full border-2 border-cyan-400/60 bg-linear-to-r from-cyan-500 to-cyan-600 px-8 xs:px-12 py-3 xs:py-5 text-base xs:text-xl font-bold text-cyan-700 shadow-[0_0_40px_rgba(6,182,212,0.5)] transition-all hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(6,182,212,0.8)]"
+              className="inline-block rounded-full border-2 border-cyan-400/60 bg-linear-to-r from-cyan-500 to-cyan-600 px-8 xs:px-12 py-3 xs:py-5 text-base xs:text-xl font-bold text-white shadow-[0_0_40px_rgba(6,182,212,0.5)] transition-all hover:border-cyan-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(6,182,212,0.8)]"
             >
               Comprar Ahora →
             </Link>
